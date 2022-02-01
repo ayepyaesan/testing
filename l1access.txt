@@ -1,0 +1,47 @@
+SERVER LOGIN
+
+cmd
+username= ssh wdp1002@dltmyanmar.com
+password= datalandtechnology
+
+username= ssh dlt@157.230.240.154
+password= datalandtechnology
+
+putty
+host name=dltmyanmar.com
+login as: dlt
+password= datalandtechnology
+
+host name=157.230.240.154 (dltmyanmar.com)
+host name=137.184.248.101(dltmyanmar.net)
+login as: wdp1002
+password= datalandtechnology
+
+WinSCP
+host name=dltmyanmar.com
+username=dlt
+password= datalandtechnology
+
+host name=157.230.240.154
+username=wdp1002
+password= datalandtechnology
+
+Commend Name->open Putty
+
+____________________________________________________________________________________
+
+DATABASE LOGIN
+Method 1
+mysql -uWDP1002 -p
+psword:datalandtechnology
+logout -> exit \q
+
+Method 2
+mysql -u WDP1002 -p
+psword:datalandtechnology
+
+____________________________________________________________________________________
+
+
+
+

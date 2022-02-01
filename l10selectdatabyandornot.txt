@@ -1,0 +1,203 @@
+=>SELECT DATA BY USING AND , OR , NOT
+
+AND OR NOT operators are used to filter data, records based 
+
+AND operator display a record TRUE
+OR operator display a record TRUE
+NOT operator display a record NOT TRUE
+
+WHERE clause can be combined with AND,OR,NOT operators
+
+=>AND Syntax
+
+Method 1 AND syntax
+SELECT * FROM tablename
+WHERE country="myanmar" AND city="yangon";
+
+
+Method 2 AND syntax
+SELECT column1,column2,.....
+FROM tablename
+WHERE country="myanmar" AND city="yangon";
+
+=>OR Syntax
+
+Method 1 OR syntax
+SELECT * FROM tablename
+WHERE city="yangon" OR city="mandalay";
+
+
+Method 2 OR syntax
+SELECT column1,column2,.....
+FROM tablename
+WHERE city="yangon" OR city="mandalay";
+
+=>NOT syntax
+
+Method 1 OR syntax
+SELECT * FROM tablename
+WHERE NOT country="thailand";
+
+Method 2 OR syntax
+SELECT column1,column2,.....
+FROM tablename
+WHERE NOT country="thailand";
+
+____________________________________________________
+*Break Time
+CREATE TABLE employees(
+    employeeid INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    age INT,
+    salary INT,
+    city VARCHAR(255) NOT NULL,
+    PRIMARY KEY(employeeid)
+);
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('aung aung',25,500000,'mandalay');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('zaw zaw',35,300000,'yangon');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('tar gyi',20,150000,'yangon');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('mya mya',23,200000,'mandalay');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('hla hla',30,700000,'yangon');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('nu nu',21,280000,'bago');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('aye_chan',31,900000,'bago');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('naung naung',17,180000,'yangon');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('maung maung',20,90000,'mawlamyine');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('pwint pwint',28,490000,'bago');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('thar zaw',33,290000,'bago');
+
+INSERT INTO employees(name,age,salary,city)
+VALUE ('aye aye aung',33,90000,'mawlamyine');
+
+___________________________________________________________
+=>EXERCISE
+
+SELECT * FROM employees;
+
+SELECT name,age,city FROM employees;
+
+SELECT employeeid,name,salary 
+FROM employees
+WHERE salary > 200000;
+
+
+SELECT employeeid,name,salary
+FROM employees 
+WHERE salary < 200000;
+
+SELECT employeeid,name,salary
+FROM employees
+WHERE salary >= 200000;
+
+SELECT employeeid,name,salary
+FROM employees
+WHERE salary <= 200000;
+
+SELECT employeeid,name,salary
+FROM employees
+WHERE salary <> 200000;
+
+SELECT employeeid,name,salary
+FROM employees
+WHERE salary = 200000;
+
+SELECT employeeid,name,salary
+FROM employees
+WHERE salary LIKE 200000;
+
+SELECT * FROM employees 
+WHERE salary = 200000;
+
+___________________________________________________________
+
+=>AND EXERCISE
+
+SELECT employeeid,name,age,salary
+FROM employees 
+WHERE salary > 300000 AND age > 30;
+
+SELECT employeeid,name,age,salary
+FROM employees 
+WHERE salary > 300000 AND age >= 30;
+
+SELECT employeeid,name,age,salary
+FROM employees 
+WHERE salary > 300000 AND age >= 20 AND city="yangon";
+
+______________________________________________________________
+
+=>OR EXERCISE
+
+SELECT employeeid,name,age,salary
+FROM employees 
+WHERE salary > 300000 AND age > 20 AND city="yangon";
+
+SELECT employeeid,name,age,salary,city
+FROM employees 
+WHERE salary > 300000 OR age > 20 AND city="yangon";
+
+SELECT employeeid,name,age,salary,city
+FROM employees 
+WHERE salary > 300000 AND age > 20 OR city="yangon";
+
+
+________________________________________________________________
+
+=>NOT EXERCISE
+
+SELECT employeeid,name,age,salary,city 
+FROM employees
+WHERE NOT city="mandalay";
+
+SELECT employeeid,name,age,salary,city 
+FROM employees
+WHERE NOT age < 25;
+
+SELECT employeeid,name,age,salary,city 
+FROM employees
+WHERE NOT age <= 25;
+
+____________________________________________________________________
+
+=>AND NOT EXERCISE
+
+SELECT employeeid,name,age,salary,city 
+FROM employees
+WHERE NOT city="mandalay";
+
+SELECT employeeid,name,age,salary,city 
+FROM employees
+WHERE NOT city="mandalay" AND NOT city="yangon";
+
+______________________________________________________________________
+
+=>Comparison Operators
+>  Greater than
+<  Less than
+>= Greater than or equal
+<= Less than or equal
+<> Greater than less than
+=  Equal To
+
+LIKE Operator

@@ -1,0 +1,75 @@
+=>INSERT DATA TO TABLE
+i. INSERT SINGLE DATA = Syntax
+
+    Method1
+
+    INSERT INTO table_name(column1,column2,column3,....)
+    VALUES (value1,value2,value3,...);
+
+    Method 2
+
+    INSERT INTO table_name 
+    VALUES(VAL1,VAL2,VAL3,....);
+    ____________________________________________________________________________________
+
+
+ii. INSERT MULTI DATA = Syntax
+
+    Method 1
+
+    INSERT INTO table_name(column1,column2,column3,....)
+    VALUES  (value1,value2,value3,...),
+            (value1,value2,value3,....),
+            (value1,value2,value3,....),
+            ....;
+
+    Method 2
+
+    INSERT INTO table_name 
+    VALUES(VAL1,VAL2,VAL3,....),
+          (VAL1,VAL2,VAL3,....),
+          (VAL1,VAL2,VAL3,....),
+          ....;
+
+____________________________________________________________________________________
+    EXERCISE
+
+    i. INSERT SINGLE DATA = Syntax
+
+    Method 1
+    INSERT INTO persons(personid,firstname,lastname,city,address)
+    VALUES (1,'tin htut','aung','mandalay','no.9,myittar st');
+
+    INSERT INTO persons(personid,firstname,lastname,city,address)
+    VALUES (2,'aung','hla','yangon','no.9,thida st');
+    
+    INSERT INTO persons(firstname,lastname,city,address,personid)
+    VALUES ('su su','hlaing','yangon','no.1,tamwe',3);
+
+    Method2
+    INSERT INTO persons VALUES(4,'hnin si','khin','mandalay','no.12,st 60');
+
+
+    ii. INSERT MULTI DATA = Syntax
+
+    Method1
+    INSERT INTO persons(personid,firstname,lastname,city,address)
+    VALUES(5,'nu','nu','mandalay','no.19,myittar st'),
+    (6,'mya','mya','mandalay','no.29,myittar st'),
+    (7,'lu lu','aung','mandalay','no.39,myittar st');
+
+    INSERT INTO persons(firstname,lastname,personid,city,address)
+    VALUES ('yu','yu',8,'mandalay','no.49,myittar st'),
+    ('kyaw','kyaw',9,'mandalay','no.59,myittar st'),
+    ('mya','mya',10,'mandalay','no.69,myittar st');
+
+
+    Method2
+    INSERT INTO persons VALUES(11,'pa','pa','mandalay','no.19,myittar st'),
+    (12,'hla','hla','mandalay','no.29,myittar st'),
+    (13,'ma','ma','mandalay','no.39,myittar st');
+
+____________________________________________________________________________________
+
+
+

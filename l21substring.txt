@@ -1,0 +1,71 @@
+=>SUBSTRING(SQL starts with 1,spacing)
+
+Syntax = Method 1
+
+SELECT SUBSTRING('Hello World',1,4);
+
+=>SUBSTR()
+
+Syntax = Method 2
+
+SELECT SUBSTR('Hello World',1,4);
+____________________________________________________________________
+                                start,spacing
+SELECT SUBSTRING('Hello World',1,4);
+
+SELECT SUBSTRING('Hello World',1,5);
+
+SELECT SUBSTRING('Hello World',2,5);
+
+                                start to end
+SELECT SUBSTRING('Hello World',7);
+
+SELECT SUBSTRING('Hello World',8);
+
+SELECT SUBSTRING('Hello World',2);
+
+SELECT SUBSTRING('Mysql Online Class',10);
+
+SELECT SUBSTRING('Hello, I'm Mr.Anton',1,10); //Error
+
+SELECT SUBSTRING("Hello, I'm Mr.Anton",1,10); //Success
+
+SELECT SUBSTRING('Hello, I\'m Mr.Anton',1,10); //Success
+
+SELECT SUBSTRING("Hello, I\"m Mr.Anton",1,10); //Success
+
+
+SELECT SUBSTRING('Hello World',-7);
+
+SELECT SUBSTRING('Mysql Online Class',-10);
+____________________________________________________________________
+
+SUBSTRING()
+
+SELECT * FROM persons;
+
+SELECT address FROM persons;
+
+SELECT SUBSTRING(address,1,10) FROM persons;
+
+SELECT SUBSTRING(address,1,10) AS 'short address' FROM persons;
+
+____________________________________________________________________
+
+SUBSTR()
+
+SELECT * FROM persons;
+
+SELECT SUBSTR(address,1,10) FROM persons;
+
+SELECT SUBSTR(address,1,10) AS 'short address' FROM persons;
+
+____________________________________________________________________
+
+=>SUBSTRING() with CONCAT()
+
+SELECT CONCAT(SUBSTRING(address,1,10),'...') FROM persons;
+
+SELECT CONCAT(
+SUBSTRING(address,1,10),'...'
+) AS 'short address' FROM persons;

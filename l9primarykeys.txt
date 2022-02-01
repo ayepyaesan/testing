@@ -1,0 +1,116 @@
+=>PRIMARY KEY CONSTRAIANTS
+
+PK Unique Indentifier
+the PK Constraint uniquely each record in the table;
+PK value must unique and cannot contain NULL values;
+PK single or multiple columns(fields);
+
+PRIMARY KEY = Syntax
+
+Method 1
+CREATE TABLE persons(
+    id INT NOT NULL,
+    firstname VARCHAR(255) NOT NULL,
+    lastname VARCHAR(255),
+    age INT,
+    PRIMARY KEY (id)
+);
+
+Method 2
+CREATE TABLE persosn(
+    id INT NOT NULL PRIMARY KEY,
+    firstname VARCHAR(255) NOT NULL,
+    lastname VARCHAR(255),
+    age INT
+);
+
+____________________________________________________________________________________
+
+CREATE TABLE computers(
+    brand VARCHAR(255),
+    made VARCHAR(255)
+);
+
+INSERT INTO computers(brand,made)
+VALUE ('asus','china');
+
+INSERT INTO computers(brand,made)
+VALUE ('asus','china');
+
+SELECT * FROM computers;
+
+DROP TABLE computers;
+
+____________________________________________________________________________________
+
+=>CREATE TABLE WITH PRIMARY KEY by brand
+CREATE TABLE computers(
+    brand VARCHAR(255) NOT NULL,
+    made VARCHAR(255),
+    PRIMARY KEY (brand)
+);
+
+DESC computers;
+
+INSERT INTO computers(brand,made)
+VALUE ('asus','china');
+
+INSERT INTO computers(brand,made)
+VALUE ('asus','thai');
+
+INSERT INTO computers(brand,made)
+VALUE ('asus','india'); //error
+
+DROP TABLE computers;
+
+____________________________________________________________________________________
+
+CREATE TABLE computers(
+    id INT NOT NULL PRIMARY KEY,
+    brand VARCHAR(255),
+    made VARCHAR(255)
+);
+
+INSERT INTO computers(brand,made)
+VALUE ('asus','china');  //error
+
+INSERT INTO computers(id,brand,made)
+VALUE (1,'asus','china');
+
+INSERT INTO computers(id,brand,made)
+VALUE (2,'hp','thai');
+
+INSERT INTO computers(id,brand,made)
+VALUE (3,'hp','thai');
+
+DROP TABLE computers;
+____________________________________________________________________________________
+
+=>CREATE TABLE WITH PRIMARY KEY by id using AUTO INCREMENT
+
+CREATE TABLE computers(
+    id INT NOT NULL AUTO_INCREMENT,
+    brand VARCHAR(255),
+    made VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+DESC computers;
+
+INSERT INTO computers(brand,made)
+VALUE ('asus','china');
+INSERT INTO computers(brand,made)
+VALUE ('asus','china');
+INSERT INTO computers(brand,made)
+VALUE ('asus','china');
+
+INSERT INTO computers(id,brand,made)
+VALUE (3,'hp','china');  //error
+
+INSERT INTO computers(id,brand,made)
+VALUE (6,'hp','china'); 
+
+INSERT INTO computers(brand,made)
+VALUE ('dell','indo'); // id starts from 7
+
+SELECT * FROM computers;+

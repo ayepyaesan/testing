@@ -1,0 +1,64 @@
+=>REPLACE ( Replace parts of strings for Results)
+
+Replace = Syntax
+
+SELECT REPLACE('Hello World','Hell','Zer');
+
+____________________________________________________________________
+
+SELECT REPLACE('Tin Htut Aung','Aung','Maung');
+
+*Case Sensitive
+SELECT REPLACE('Hello World','hell','Zer'); =>Hello World *no action
+*Case Senitive
+SELECT REPLACE('HellO World','O','*'); =>Hell* World
+
+SELECT REPLACE('Hello World','o','$');
+
+SELECT REPLACE('Hello World','o','A');
+
+SELECT REPLACE('Hello World','0','A'); *no action
+
+SELECT REPLACE('Hello World','l','7');
+
+SELECT REPLACE('cheese bread coffee milk',' ',' and ');
+
+SELECT * FROM persons;
+
+SELECT city FROM persons;
+
+SELECT REPLACE(city,'m','M') FROM persons;
+
+SELECT REPLACE(city,'m','M') AS 'current location' FROM persons;
+
+____________________________________________________________________
+
+=>REPLACE() WITH SUBSTRING(), SUBSTR() AND CONCAT()
+
+SELECT * FROM persons;
+
+SELECT SUBSTRING(REPLACE(city,'m','M'),1,5) FROM persons; 
+
+SELECT SUBSTR(REPLACE(address,'n','N'),1,5) FROM persons;
+
+SELECT CONCAT(SUBSTR(REPLACE(address,'n','N'),1,5),'...') FROM persons;
+
+SELECT CONCAT(SUBSTR(REPLACE(address,'n','N'),1,5),'...') AS 'short address' FROM persons;
+
+____________________________________________________________________
+
+EXE
+
+mandalay
+
+REPLACE('mandalay','m','M');
+
+Mandalay
+
+CONCAT(REPLACE('mandalay','m','M'),'...');
+
+Mandalay...
+
+SUBSTRING(CONCAT(REPLACE('mandalay','m','M'),'...'),1,5);
+
+Manda
